@@ -1,0 +1,44 @@
+body {
+    margin: 0;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.pwa-logo {
+    width: 100px;
+    height: 75px;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-around;
+}
+
+.header {
+    margin-left: 1rem;
+    margin-right: 1rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+}
+
+.list-nav {
+    display: flex;
+}
+
+.list-item {
+    padding-right: 1rem;
+    padding-left: 1rem;
+}
+
+.container-list-nav {
+    display: flex;
+    align-items: center;
+}
