@@ -23,10 +23,8 @@ a {
 }
 
 .header {
-    margin-left: 1rem;
-    margin-right: 1rem;
-    padding-left: 0.5rem;
-    padding-right: 0.5rem;
+    -webkit-box-shadow: 0px 2px 5px 2px #CCCCCC; 
+box-shadow: 0px 2px 5px 2px #CCCCCC;
 }
 
 .list-nav {
@@ -41,4 +39,24 @@ a {
 .container-list-nav {
     display: flex;
     align-items: center;
+}
+
+.left-content {
+    position: fixed;
+    width: 300px;
+    min-width: 290px;
+    height: 100%;
+    top: 83px;
+    left: 0;
+}
+
+.right-content {
+    margin-left: 310px;
+    margin-top: 5px;
+}
+
+.nav-wraper {
+    height: 80%;
+    overflow-y: auto;
+    overflow-x: hidden;
 }
