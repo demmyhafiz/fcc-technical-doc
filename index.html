@@ -11,6 +11,21 @@
   <link rel="apple-touch-icon" href="icon.png">
   <!-- Place favicon.ico in the root directory -->
   <link rel="stylesheet" href="css/main.css">
+  <style>
+    @media only screen and (max-width: 799px) {
+
+    
+      #navbar {
+        position: absolute;
+        top: 0;
+        padding: 0;
+        margin: 0;
+        width: 100%;
+        max-height: 299px;
+        z-index: 1;
+      }
+    }
+  </style>
 </head>
 
 <body>
@@ -21,65 +36,370 @@
   <!-- Add your site or application content here -->
   <header class="header">
     <div class="navbar">
-    <div class="img-nav">
-      <img class="pwa-logo" src="img/pwa-logo.png" alt="PWA Logo">
-    </div>
+      <div class="img-nav">
+        <img class="pwa-logo" src="img/pwa-logo.png" alt="PWA Logo">
+      </div>
 
-    <div class="container-list-nav">
-    <nav class="parent-list-nav">
-      <ul class="list-nav">
-        <li class="list-item"><a href="">Home</a></li>
-        <li class="list-item"><a href="">About</a></li>
-        <li class="list-item"><a href="">Contact</a></li>
-      </ul>
-    </nav>
-    </div>
+      <div class="container-list-nav">
+        <nav class="parent-list-nav">
+          <ul class="list-nav">
+            <li class="list-item"><a href="">Home</a></li>
+            <li class="list-item"><a href="">About</a></li>
+            <li class="list-item"><a href="">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
     </div>
   </header>
 
-  <nav class="left-content">
-      <header class="nav-header">PWA Documentation</header>
-      <ul class="nav-wraper">
-        <li class="nav-list-item"><a href="">Introduction to Progressive Web App</a></li>
-        <li class="nav-list-item"><a href="">Introduction to Progressive Web App</a></li>
-        <li class="nav-list-item"><a href="">Introduction to Progressive Web App</a></li>
-        <li class="nav-list-item"><a href="">Introduction to Progressive Web App</a></li>
-        <li class="nav-list-item"><a href="">Introduction to Progressive Web App</a></li>
-        <li class="nav-list-item"><a href="">Introduction to Progressive Web App</a></li>
-        <li class="nav-list-item"><a href="">Introduction to Progressive Web App</a></li>
-        <li class="nav-list-item"><a href="">Introduction to Progressive Web App</a></li>
-        <li class="nav-list-item"><a href="">Introduction to Progressive Web App</a></li>
-        <li class="nav-list-item"><a href="">Introduction to Progressive Web App</a></li>
-        <li class="nav-list-item"><a href="">Introduction to Progressive Web App</a></li>
-        <li class="nav-list-item"><a href="">Introduction to Progressive Web App</a></li>
-        <li class="nav-list-item"><a href="">Introduction to Progressive Web App</a></li>
-        <li class="nav-list-item"><a href="">Introduction to Progressive Web App</a></li>
-        <li class="nav-list-item"><a href="">Introduction to Progressive Web App</a></li>
-      </ul>
+  <nav class="left-content" id="navbar">
+    <header class="nav-header">PWA Documentation</header>
+    <ul class="nav-wraper">
+      <li class="nav-item"><a class="nav-link" href="#Introduction_to_Progressive_Web_App">Introduction to Progressive
+          Web App</a></li>
+      <li class="nav-item"><a class="nav-link" href="#What_makes_an_app_a_PWA">What makes an app a PWA</a></li>
+      <li class="nav-item"><a class="nav-link" href="#Browser_support">Browser Support</a></li>
+      <li class="nav-item"><a class="nav-link" href="#It_is_worth_doing_all_that">It is worth doing all that</a></li>
+      <li class="nav-item"><a class="nav-link" href="#Architecture_of_an_app">Architecture of an app</a></li>
+      <li class="nav-item"><a class="nav-link" href="#App_Shell">App Shell</a></li>
+      <li class="nav-item"><a class="nav-link" href="#Different_Concept:_Stream">Different Concept: Stream</a></li>
+      <li class="nav-item"><a class="nav-link" href="#Structure_of_example_application">Structure of example
+          application</a></li>
+    </ul>
   </nav>
 
-  <main class="right-content">
-    <section class="content-wraper">
-      <header class="content-header">Introduction</header>
+  <main class="main-wraper" id="main-doc">
+    <section class="main-section" id="Introduction_to_Progressive_Web_App">
+      <header class="content-header">Introduction to Progressive Web App</header>
       <article class="paragraph-wraper">
-      <p class="content-paragraph">Progressive Web Apps provide an installable, app-like experience on desktop and mobile that are built and delivered directly via the web. They're web apps that are fast and reliable. And most importantly, they're web apps that work in any browser. If you're building a web app today, you're already on the path towards building a Progressive Web App.
-        Every web experience must be fast, and this is especially true for Progressive Web Apps. Fast refers to the time it takes to get meaningful content on screen and to provide an interactive experience.
+        <p class="content-paragraph">
+          PWAs (Progressive Web App) are web apps developed using a number of specific
+          technologies and standard
+          patterns to allow them to take advantage of both web and native app features. For example, web apps are more
+          discoverable — it's a lot easier and faster to visit a website than install an
+          application, and you can also share web apps via a link. On the other hand, native apps are better integrated
+          with the operating system and therefore offer a more
+          seamless experience for the users. You can install a native app so that it works offline, and users love
+          tapping their homescreen icons to easily access their favorite apps, rather than navigating to it using a
+          browser. PWAs give us the ability to create web apps that can enjoy these same advantages.
+          It's not a brand new concept — such ideas have been revisited many times on the web platform with various
+          approaches in the past. Progressive Enhancement and responsive design already allow us to build mobile
+          friendly websites. Working offline and installing apps was possible in the Firefox OS ecosystem a few years
+          ago. PWAs, however, provide all this and more, without getting rid of any of the existing features that make
+          the
+          web great.
+        </p>
+      </article>
+    </section>
+    <section class="main-section" id="What_makes_an_app_a_PWA">
+      <header class="content-header">What makes an app a PWA</header>
+      <article class="paragraph-wraper">
+        <p class="content-paragraph">
+          As we hinted at above, PWAs are not created with a single technology. They
+          represent a new philosophy for building web apps, involving some specific patterns, APIs, and other features.
+          It's not that obvious if a web app is a PWA or not from first glance. An app could be considered a PWA when it
+          meets certain requirements, or implements a set of given features: works offline, is installable, is easy to
+          synchronize, can send push notifications, etc. In addition, there are tools to measure the completeness of an
+          app in percentages. (Lighthouse is currently
+          the most popular one.) By implementing various technological advantages, we can make an app more progressive,
+          thus ending up with a higher Lighthouse score. But this is only a rough indicator. There are some key
+          principles a web app should try to observe to be identified as a PWA. It should be:
+          <ul class="item-list">
+            <li>Discoverable, so the contents can be found through search engines.</li>
+            <li>Installable, so it's available on the device's home screen.</li>
+            <li>Linkable, so you can share it by simply sending a URL.</li>
+            <li>Network independent, so it works offline or with a poor network connection.</li>
+            <li>Progressive, so it's still usable on a basic level on older browsers, but fully-functional on the latest
+              ones.</li>
+            <li>Re-engageable, so it's able to send notifications whenever there's new content available.</li>
+            <li>Responsive, so it's usable on any device with a screen and a browser — mobile phones, tablets, laptops,
+              TVs,
+              fridges, etc.</li>
+            <li>Safe, so the connection between you and the app is secured against any third parties trying to get
+              access to
+              your sensitive data.</li>
+          </ul>
+        </p>
+      </article>
+    </section>
 
-And, it must be reliably fast. It's hard to stress enough how much better reliable performance is. Think of it this way: the first load of a native app is frustrating. It's gated by an app store and a huge download, but once you get to a point where the app is installed, that up-front cost is amortized across all app starts, and none of those starts have a variable delay. Each application start is as fast as the last, no variance. A Progressive Web App must deliver this reliable performance that users have come to expect from any installed experience.
-Progressive Web Apps can run in a browser tab, but are also installable. Bookmarking a site just adds a shortcut, but an installed Progressive Web App (PWA) looks and behaves like all of the other installed apps. It launches from the same place as other apps launch. You can control the launch experience, including a customized splash screen, icons, and more. It runs as an app, in an app window without an address bar or other browser UI. Like all other installed apps, it's a top level app in the task switcher.
+    <section class="main-section" id="Browser_support">
+      <header class="content-header">Browser Support</header>
+      <article class="paragraph-wraper">
+        <p class="content-paragraph">
+          As mentioned before, PWAs don't depend on a single API, but rather using various technologies to achieve the
+          goal of delivering the best web experience possible.
+          The key ingredient required for PWAs is service worker support. Thankfully service workers are now supported
+          on all major browsers on desktop and mobile.
+          Other features such as Web App Manifest, Push, Notifications, and Add to Home Screen functionality have wide
+          support too. Currently, Safari has limited support for Web App Manifest and Add to Home Screen and no support
+          for web push notifications. However, other major browsers support all these features.
+          Some of these APIs are experimental, with the documentation still in draft, but seeing success stories like
+          those of Flipkart and AliExpress should convince you to try and implement some of the PWA features in your web
+          app already.
+          Above all you should follow the progressive enhancement rule — use the technologies that provide such
+          enhancements only where they are supported, but still offer the basic functionality of your app if it isn't.
+          This way everybody will be able to use it, but those with modern browsers will benefit from PWA features even
+          more.
+        </p>
+      </article>
+    </section>
 
-Remember, it's critical that an installable PWA is fast and reliable. Users who install a PWA expect that their apps work, no matter what kind of network connection they're on. It's a baseline expectation that must be met by every installed app.
-Using responsive design techniques, PWAs work on both mobile and desktop, using a single code base between platforms. If you're considering writing a native app, take a look at the benefits that a PWA offers.
-</p>
-</article>
+    <section class="main-section" id="It_is_worth_doing_all_that">
+      <header class="content-header">It is worth doing all that</header>
+      <article class="paragraph-wraper">
+        <p class="content-pargraph">
+          Absolutely! With a relatively small amount of effort required to implement the core PWA features, the benefits
+          are huge. For example:
+          <ul class="item-list">
+            <li>A decrease in loading times after the app has been installed, thanks to caching with Service Workers,
+              along with saving precious bandwidth and time. PWAs have near-instantaneous loading (from the second
+              visit).</li>
+            <li>The ability to update only the content that has changed when an app update is available. In contrast,
+              with a native app, even the slightest modification can force the user to download the entire application
+              again.</li>
+            <li>A look and feel that is more integrated with the native platform — app icons on the homescreen, apps
+              that run fullscreen, etc.</li>
+            <li>Re-engaging with users via system notifications and push messages, leading to more engaged users and
+              better conversion rates.</li>
+          </ul>
+          There are many success stories of companies trying the PWA route, opting for an enhanced website experience
+          rather than a native app, and seeing significant measurable benefits as a result. The website PWA Stats shares
+          many case studies that indicate these benefits.
+          The best-known success story is probably Flipkart Lite — India's largest e-commerce site rebuilt as a
+          progressive web app in 2015, which resulted in 70% increase in conversions. The AliExpress PWA has also seen
+          much better results than the web or native app, with a 104% increase in conversion rates for new users. Given
+          their profit increase, and the relatively low amount of work required for the conversion to PWAs, the
+          advantage is clear.
+          Early stage emerging startups like couponmoto have also started using progressive web apps to drive more
+          consumer engagement, showing that they can help small as well as big companies to (re-)engage users more
+          effectively.
+          You can check the list at pwa.rocks for more examples. Particularly worth mentioning is the hnpwa.com page —
+          this lists an example implementation of the Hacker News website (instead of the usual TodoMVC app), in which
+          you can see the use of various front-end frameworks.
+          You can even generate PWAs online using the PWABuilder website.
+          For service worker- and push- specific information, be sure to check the Service Worker Cookbook, a collection
+          of recipes using service workers in modern sites.
+          It's well worth trying out a PWA approach, so you can see for yourself if it works for your app.
+        </p>
+      </article>
+    </section>
+
+    <section class="main-section" id="Architecture_of_an_app">
+      <header class="content-header">Architecture of an app</header>
+      <article class="paragraph-wraper">
+        <p class="content-paragraph">
+          There are two main, different approaches to rendering a website — on the server or on the client. They both
+          have their advantages and disadvantages, and you can mix the two approaches to some degree.
+          <ul class="item-list">
+            <li>Server-side rendering (SSR) means a website is rendered on the server, so it offers quicker first load,
+              but navigating between pages requires downloading new HTML content. It works great across browsers, but it
+              suffers in terms of time navigating between pages and therefore general perceived performance — loading a
+              page requires a new round trip to the server.</li>
+            <li>Client-side rendering (CSR) allows the website to be updated in the browser almost instantly when
+              navigating to different pages, but requires more of an initial download hit and extra rendering on the
+              client at the beginning. The website is slower on an initial visit, but can be faster to navigate.</li>
+          </ul>
+          Mixing SSR with CSR can lead to the best results — you can render a website on the server, cache its contents,
+          and then update the rendering on the client-side as and when needed. The first page load is quick because of
+          the SSR, and the navigation between pages is smooth because the client can re-render the page with only the
+          parts that have changed.
+          PWAs can be built using any approach you like, but some will work better than the others. The most popular
+          approach is the "app shell" concept, which mixes SSR and CSR in exactly the way described above, and in
+          addition follows the "offline first" methodology which we will explain in detail in upcoming articles and use
+          in our example application. There is also a new approach involving the Streams API, which we'll mention
+          briefly.
+        </p>
+      </article>
+    </section>
+
+    <section class="main-section" id="App_Shell">
+      <header class="content-header">App Shell</header>
+      <article class="paragraph-wraper">
+        <p class="content-paragraph">
+          The App shell concept is concerned with loading a minimal user interface as soon as possible and then caching
+          it so it is available offline for subsequent visits before then loading all the contents of the app. That way,
+          the next time someone visits the app from the device, the UI loads from the cache immediately and any new
+          content is requested from the server (if it isn’t available in the cache already).
+          This structure is fast, and also feels fast as the user sees "something" instantly, instead of a loading
+          spinner or a blank page. It also allows the website to be accessible offline if the network connection is not
+          available.
+          We can control what is requested from the server and what is retrieved from the cache with a service worker,
+          which will be explained in detail in the next article — for now let's focus on the structure itself.
+
+          This architecture allows a website to benefit the most from all the PWA features — it caches the app shell and
+          manages the dynamic content in a way that greatly improves the performance. In addition to the basic shell,
+          you can add other features such as add to home screen or push notifications, safe in the knowledge that the
+          app will still work OK if they are not supported by the user's browser — this is the beauty of progressive
+          enhancement.
+          The website feels like a native app with instant interaction and solid performance while keeping all the
+          benefits of the web.
+
+          It's important to remember the PWA advantages and keep them in mind when designing the application. The app
+          shell approach allows websites to be:
+          <ul class="item-list">
+            <li>Linkable: Even though it behaves like a native app, it is still a website — you can click on the links
+              within the page and send a URL to someone if you want to share it.</li>
+            <li>Progressive: Start with the "good, old basic website” and progressively add new features while
+              remembering to detect if they are available in the browser and gracefully handle any errors that crop up
+              if support is not available. For example, an offline mode with the help of service workers is just an
+              extra trait that makes the website experience better, but it's still perfectly usable without it.</li>
+            <li>Responsive: Responsive web design also applies to progressive web apps, as both are mainly for mobile
+              devices. There are so many varied devices with browsers — it's important to prepare your website so it
+              works on different screen sizes, viewports or pixel densities, using technologies like viewport meta tag,
+              CSS media queries, Flexbox, and CSS Grid.</li>
+          </ul>
+        </p>
+      </article>
+    </section>
+
+    <section class="main-section" id="Different_Concept:_Stream">
+      <header class="content-header">Different Concept: Stream</header>
+      <article class="paragraph-wraper">
+        <p class="content-paragraph">
+          An entirely different approach to server- or client-side Rendering can be achieved with the Streams API. With
+          a little help from service workers, streams can greatly improve the way we parse content.
+          The app shell model requires all the resources to be available before the website can start rendering. It's
+          different with HTML, as the browser is actually streaming the data already and you can see when the elements
+          are loaded and rendered on the website. To have the JavaScript "operational", however, it has to be downloaded
+          in its entirety.
+          The Streams API allows developers to have direct access to data streaming from the server — if you want to
+          perform an operation on the data (for example, adding a filter to a video), you no longer need to wait for all
+          of it to be downloaded and converted to a blob (or whatever) — you can start right away. It provides
+          fine-grained control — the stream can be started, chained with another stream, cancelled, checked for errors,
+          and more.
+          In theory, streaming is a better model, but it's also more complex, and at the time of writing (March 2018)
+          the Streams API is still a work-in-progress and not yet fully available in any of the major browsers. When it
+          is available, it will be the fastest way of serving the content — the benefits are going to be huge in terms
+          of performance.
+          For working examples and more information, see the Streams API documentation.
+        </p>
+      </article>
+    </section>
+
+    <section class="main-section" id="Structure_of_example_application">
+      <header class="content-header">Structure of example application</header>
+      <article class="paragraph-wraper">
+        <p class="content-paragraph">
+          The js13kPWA website structure is quite simple: it consists of a single HTML file (index.html) with basic CSS
+          styling (style.css), and a few images, scripts, and fonts. The folder structure looks like this:
+          <img class="img-paragraph" src="img/js13kpwa-directory.png" alt="pwa directory">
+        </p>
+      </article>
+
+      <article class="paragraph-wraper">
+        <h2>The HTML</h2>
+        <p class="content-paragraph">
+          From the HTML point of view, the app shell is everything outside the content section:
+          <pre class="code-paragraph">
+            <code>
+                &lt;!DOCTYPE html&gt;
+                &lt;html lang="en"&gt;
+                &lt;head&gt;
+                  &lt;meta charset="utf-8"&gt;
+                  &lt;title&gt;js13kGames A-Frame entries&lt;/title&gt;
+                  &lt;meta name="description" content="A list of A-Frame entries submitted to the js13kGames 2017 competition, used as an example for the MDN articles about Progressive Web Apps."&gt;
+                  &lt;meta name="author" content="end3r"&gt;
+                  &lt;meta name="theme-color" content="#B12A34"&gt;
+                  &lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;
+                  &lt;meta property="og:image" content="icons/icon-512.png"&gt;
+                  &lt;link rel="shortcut icon" href="favicon.ico"&gt;
+                  &lt;link rel="stylesheet" href="style.css"&gt;
+                  &lt;link rel="manifest" href="js13kpwa.webmanifest"&gt;
+                  &lt;script src="data/games.js" defer&gt;&lt;/script&gt;
+                  &lt;script src="app.js" defer&gt;&lt;/script&gt;
+                &lt;/head&gt;
+                &lt;body&gt;
+                &lt;header&gt;
+                  &lt;p&gt;&lt;a class="logo" href="http://js13kgames.com"&gt;&lt;img src="img/js13kgames.png" alt="js13kGames"&gt;&lt;/a&gt;&lt;/p&gt;
+                &lt;/header&gt;
+                &lt;main&gt;
+                  &lt;h1&gt;js13kGames A-Frame entries&lt;/h1&gt;
+                  &lt;p class="description"&gt;List of games submitted to the &lt;a href="http://js13kgames.com/aframe"&gt;A-Frame category&lt;/a&gt; in the &lt;a href="http://2017.js13kgames.com"&gt;js13kGames 2017&lt;/a&gt; competition. You can &lt;a href="https://github.com/mdn/pwa-examples/blob/master/js13kpwa"&gt;fork js13kPWA on GitHub&lt;/a&gt; to check its source code.&lt;/p&gt;
+                  &lt;button id="notifications"&gt;Request dummy notifications&lt;/button&gt;
+                  &lt;section id="content"&gt;
+                    // Content inserted in here
+                  &lt;/section&gt;
+                &lt;/main&gt;
+                &lt;footer&gt;
+                  &lt;p&gt;© js13kGames 2012-2018, created and maintained by &lt;a href="http://end3r.com"&gt;Andrzej Mazur&lt;/a&gt; from &lt;a href="http://enclavegames.com"&gt;Enclave Games&lt;/a&gt;.&lt;/p&gt;
+                &lt;/footer&gt;
+                &lt;/body&gt;
+                &lt;/html&gt;
+            </code>
+            </pre>
+          The <code>&lt;head&gt;</code> section contains some basic info like title, description and links to CSS, web
+          manifest, games content JS file, and app.js — that's where our JavaScript application is initialized. The
+          <code>&lt;body&gt;</code> is split into the <code>&lt;header&gt;</code> (containing linked image),
+          <code>&lt;main&gt;</code> page (with title, description and place for a content), and
+          <code>&lt;footer&gt;</code> (copy and links).
+
+          The app's only job is to list all the A-Frame entries from the js13kGames 2017 competition. As you can see it
+          is a very ordinary, one page website — the point is to have something simple so we can focus on the
+          implementation of the actual PWA features.
+        </p>
+      </article>
+
+      <article class="paragraph-wraper">
+        <h2>The CSS</h2>
+        <p class="content-paragraph">
+          The CSS is also as plain as possible: it uses @font-face to load and use a custom font, and it applies some
+          simple styling of the HTML elements. The overall approach is to have the design look good on both mobile (with
+          a responsive web design approach) and desktop devices.
+        </p>
+      </article>
+
+      <article class="paragraph-wraper">
+        <h2>The main app JavaScript</h2>
+        <p class="content-paragraph">
+          The app.js file does a few things we will look into closely in the next articles. First of all it generates
+          the content based on this template:
+          <pre class="code-paragraph">
+              <code>
+                  var template = "&lt;article&gt;\n\
+                  &lt;img src='data/img/SLUG.jpg' alt='NAME'&gt;\n\
+                  &lt;h3&gt;#POS. NAME&lt;/h3&gt;\n\
+                  &lt;ul&gt;\n\
+                  &lt;li&gt;&lt;span&gt;Author:&lt;/span&gt; &lt;strong&gt;AUTHOR&lt;/strong&gt;&lt;/li&gt;\n\
+                  &lt;li&gt;&lt;span&gt;Twitter:&lt;/span&gt; &lt;a href='https://twitter.com/TWITTER'&gt;@TWITTER&lt;/a&gt;&lt;/li&gt;\n\
+                  &lt;li&gt;&lt;span&gt;Website:&lt;/span&gt; &lt;a href='http://WEBSITE/'&gt;WEBSITE&lt;/a&gt;&lt;/li&gt;\n\
+                  &lt;li&gt;&lt;span&gt;GitHub:&lt;/span&gt; &lt;a href='https://GITHUB'&gt;GITHUB&lt;/a&gt;&lt;/li&gt;\n\
+                  &lt;li&gt;&lt;span&gt;More:&lt;/span&gt; &lt;a href='http://js13kgames.com/entries/SLUG'&gt;js13kgames.com/entries/SLUG&lt;/a&gt;&lt;/li&gt;\n\
+                  &lt;/ul&gt;\n\
+              &lt;/article&gt;";
+              var content = '';
+              for(var i=0; i&lt;games.length; i++) {
+                  var entry = template.replace(/POS/g,(i+1))
+                      .replace(/SLUG/g,games[i].slug)
+                      .replace(/NAME/g,games[i].name)
+                      .replace(/AUTHOR/g,games[i].author)
+                      .replace(/TWITTER/g,games[i].twitter)
+                      .replace(/WEBSITE/g,games[i].website)
+                      .replace(/GITHUB/g,games[i].github);
+                  entry = entry.replace('&lt;a href=\'http:///\'&gt;&lt;/a&gt;','-');
+                  content += entry;
+              };
+              document.getElementById('content').innerHTML = content;
+              </code>
+            </pre>
+        </p>
+      </article>
     </section>
   </main>
-  <script src="js/main.js"></script>
 
+  <script src="js/main.js"></script>
+  <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
   <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
   <script>
-    window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
-    ga('create', 'UA-XXXXX-Y', 'auto'); ga('set','transport','beacon'); ga('send', 'pageview')
+    window.ga = function () {
+      ga.q.push(arguments)
+    };
+    ga.q = [];
+    ga.l = +new Date;
+    ga('create', 'UA-XXXXX-Y', 'auto');
+    ga('set', 'transport', 'beacon');
+    ga('send', 'pageview')
+
   </script>
   <script src="https://www.google-analytics.com/analytics.js" async></script>
 </body>
